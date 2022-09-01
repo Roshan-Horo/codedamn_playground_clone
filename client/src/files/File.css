@@ -1,0 +1,50 @@
+.fileContainer{
+    background-color: #121212;
+    color: #d4d4d4;
+    display: flex;
+    padding: 0.25rem 0.8rem;
+}
+
+.fileContainer:hover{
+    /* opacity: 0.75; */
+    background-color: #2a2d2e;
+    cursor: pointer;
+}
+
+.displayNone{
+    display: none;
+}
+
+.fileLogo{
+    width: 30px;
+    height: 30px;
+    padding:0 5px;
+}
+
+.fileDelete{
+    margin-left: auto;
+}
+
+/* files header */
+
+.filesHeader{
+    background-color: #292929;
+    color: #fff;
+    padding: 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filesBack{
+    padding: 0 0.5rem;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+}
+
+.filesBack:hover{
+    cursor: pointer;
+}
+
+

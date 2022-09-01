@@ -1,0 +1,18 @@
+.terminal-container{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header{
+    color: #fff;
+
+    display: flex;
+}
+
+.terminal-header div{
+    border-top: 2px solid salmon;
+    padding: 0.25rem 0.5rem;
+    background-color: #292929;
+}

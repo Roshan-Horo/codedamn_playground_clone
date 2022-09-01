@@ -1,0 +1,8 @@
+tabs: ['index.js']
+terminal-one: |
+    yarn install
+    yarn dev --no-cache
+terminal-two: |
+    cd client
+    yarn install
+    yarn dev
