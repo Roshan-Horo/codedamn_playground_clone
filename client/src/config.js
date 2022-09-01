@@ -1,7 +1,7 @@
-export const WS_SOCKET_HOSTNAME = 'wss://someone-paragraph.codedamn.app:1338'
+export const WS_SOCKET_HOSTNAME = 'ws://192.168.1.150:8080'
 
-export const OUTPUT_URL = 'https://example.com'
+export const OUTPUT_URL = 'http://192.168.1.150:1337'
 
-export const defaultOpenedFiles = ['index.js','package.json']
+export const defaultOpenedFiles = ['src/App.jsx']
 
-export const PARENT_FOLDER = '/home/damner/code'
+export const PARENT_FOLDER = '/home/testuser/code'

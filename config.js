@@ -1,3 +1,5 @@
-const defaultReadPath = '/home/damner/code'
+const defaultReadPath = '/home/testuser/code'
 
-module.exports = { defaultReadPath }
+const WS_SERVER_PORT = 8080
+
+module.exports = { defaultReadPath, WS_SERVER_PORT }
