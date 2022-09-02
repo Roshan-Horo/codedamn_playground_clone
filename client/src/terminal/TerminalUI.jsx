@@ -3,8 +3,6 @@ import { Terminal } from 'xterm';
 import 'xterm/css/xterm.css'
 import './TerminalUI.css'
 
-const SOCKET_URL = 'wss://long-century.codedamn.app:1338'
-
 function TerminalUI({io}) {
     const terminalRef = useRef()
 
@@ -23,12 +21,10 @@ function TerminalUI({io}) {
 
     function listenToInput(){
         term.onData(data => {
-            console.log('input', data)
             io.emit('input', data)
         })
 
         io.on('output', data => {
-            console.log('output : ', data)
             term.write(data)
         })
     }

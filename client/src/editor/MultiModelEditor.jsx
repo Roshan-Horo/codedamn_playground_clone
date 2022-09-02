@@ -10,13 +10,12 @@ const MultiModelEditor = ( { io } ) => {
   const editorRef = useRef(null)
   const { allFiles, setAllFiles, activeFile, setActiveFile } = useContext(FileContext)
 
-//   useEffect(() => {
-//     editorRef.current?.focus();
-//   }, [activeFile]);
+  useEffect(() => {
+    editorRef.current?.focus();
+  }, [activeFile]);
 
   io.on('file_read_output', data => {
       data.language = fileLanguage(data.extName)
-      console.log('got file : ',data)
       setAllFiles(current => {
           return Object.defineProperty(current, data.name, {value : data,
                     writable : true,
@@ -34,7 +33,6 @@ const MultiModelEditor = ( { io } ) => {
   }
 
   function handleActiveFileClick(fileName){
-      console.log('Active file click : ', fileName)
       setActiveFile(allFiles[fileName])
   }
 

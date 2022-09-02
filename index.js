@@ -2,12 +2,13 @@ const http = require('http')
 const SocketService = require('./SocketService')
 const express = require('express')
 const cors = require('cors')
+const { WS_SERVER_PORT } = require('./config.js')
 
 const app = express()
 app.use(cors())
 
 // NOTE: YOU HAVE TO RUN THE SERVER ON THIS PORT ONLY. OTHERWISE THE OUTPUT ON RIGHT WILL NOT WORK
-const port = 1338
+const port = WS_SERVER_PORT
 
 const server = http.createServer(app)
 
