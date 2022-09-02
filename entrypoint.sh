@@ -1,6 +1,6 @@
 #!/bin/bash
-node index.js &
+/usr/bin/node index.js &
 cd client
-yarn run dev &
+/root/.yarn/bin/yarn run dev &
 cd /home/testuser/code
-live-server --port=3000 index.html &
+/root/.yarn/bin/yarn run dev &

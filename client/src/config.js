@@ -1,7 +1,7 @@
-export const WS_SOCKET_HOSTNAME = 'wss://gather-sink.codedamn.app:1338'
+export const WS_SOCKET_HOSTNAME = 'ws://68.183.92.186:8080'
 
-export const OUTPUT_URL = 'https://example.com'
+export const OUTPUT_URL = 'http://68.183.92.186:1337'
 
-export const defaultOpenedFiles = ['index.js','package.json']
+export const defaultOpenedFiles = ['package.json', 'src/App.jsx']
 
-export const PARENT_FOLDER = '/home/damner/code'
+export const PARENT_FOLDER = '/home/testuser/code'

@@ -17,7 +17,7 @@ class PTY {
 
         this.ptyProcess = pty.spawn(this.shell, [], {
             name: 'xterm-color',
-            cwd: process.env.HOME, // starting path of the terminal
+            cwd: 'home/testuser/code', // starting path of the terminal
             env: process.env
         })
 
