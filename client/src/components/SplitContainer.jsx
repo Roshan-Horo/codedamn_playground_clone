@@ -11,6 +11,7 @@ import { OUTPUT_URL } from '../config.js'
 const io = initSocket();
 
 const SplitContainer = () => {
+    
     return (
       <>
        <Split 
@@ -26,7 +27,12 @@ const SplitContainer = () => {
     cursor="col-resize"
 
        >
-         <div className="files"><Files io={io} /></div>
+        <div className="files">
+         { 
+             <Files io={io} />
+            /* <div>files</div> */
+         }
+        </div>
          <Split 
           className="editorContainer"
           sizes={[80,20]}
@@ -39,7 +45,13 @@ const SplitContainer = () => {
             direction="vertical"
             cursor="col-resize"
          >
-           <div className="editor"><MultiModelEditor io={io} /></div>
+           <div className="editor">
+             { 
+                 <MultiModelEditor io={io} />
+                /* <div>Editor</div> */
+             }
+
+            </div>
            <div className="terminal"><TerminalUI io={io} /></div>
          </Split>
 

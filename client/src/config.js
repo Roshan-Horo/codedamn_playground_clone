@@ -1,4 +1,4 @@
-export const WS_SOCKET_HOSTNAME = 'wss://someone-paragraph.codedamn.app:1338'
+export const WS_SOCKET_HOSTNAME = 'wss://gather-sink.codedamn.app:1338'
 
 export const OUTPUT_URL = 'https://example.com'
 

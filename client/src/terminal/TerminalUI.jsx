@@ -1,37 +1,34 @@
-import React, { useRef,useEffect } from 'react'
+import React, { useRef,useEffect, useContext } from 'react'
 import { Terminal } from 'xterm';
 import 'xterm/css/xterm.css'
 import './TerminalUI.css'
-// import { io } from '../utils/Socket.js'
 
-let term = new Terminal()
-// let io = socketio.connect(SOCKET_URL, { transports: ['websocket'] });
+const SOCKET_URL = 'wss://long-century.codedamn.app:1338'
 
-function TerminalUI( { io } ) {
+function TerminalUI({io}) {
     const terminalRef = useRef()
 
+    let term = new Terminal()
+    
     useEffect(() => {
-
-    // term.setOption("theme", {
-    //     background: '#202B33',
-    //     foreground: '#F5F8FA'
-    // })
     
     // set terminal
+    console.log('init terminal')
     term.open(terminalRef.current)
     term.resize(90, 5);
     term.write("Terminal Connected to Server")
     term.write('\r\n');
-    console.log(terminalRef.current)
 
-    })
+    },[])
 
     function listenToInput(){
         term.onData(data => {
+            console.log('input', data)
             io.emit('input', data)
         })
 
         io.on('output', data => {
+            console.log('output : ', data)
             term.write(data)
         })
     }
