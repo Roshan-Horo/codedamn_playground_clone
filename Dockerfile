@@ -12,4 +12,6 @@ COPY ./demo_app code
 WORKDIR /home/testuser/code
 RUN /root/.yarn/bin/yarn install
 EXPOSE 1337
-CMD ./entrypoint.sh
+WORKDIR /app
+ENTRYPOINT ["bash"]
+CMD ["./entrypoint.sh"]
