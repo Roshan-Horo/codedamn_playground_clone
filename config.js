@@ -1,4 +1,4 @@
-const defaultReadPath = '/home/testuser/code'
+const defaultReadPath = '/root/app/playground-clone/demo_app'
 
 const WS_SERVER_PORT = 8080
 
