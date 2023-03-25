@@ -7,3 +7,7 @@ Change the config in client/src/config.js - change ip
 ## with Docker :
 
 change the path - client/src/config.js, config.js, change ip, entrypoint.sh
+
+## Run
+
+Run : nohup ./entrypoint.sh &

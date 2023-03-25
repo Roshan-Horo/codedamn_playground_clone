@@ -1,5 +1,6 @@
 const os = require('os')
 const pty = require('node-pty')
+const {defaultReadPath} = require('./config')
 
 class PTY {
     constructor(socket) {
@@ -17,7 +18,7 @@ class PTY {
 
         this.ptyProcess = pty.spawn(this.shell, [], {
             name: 'xterm-color',
-            cwd: '/home/testuser/code', // starting path of the terminal
+            cwd: defaultReadPath, // starting path of the terminal
             env: process.env
         })
 
